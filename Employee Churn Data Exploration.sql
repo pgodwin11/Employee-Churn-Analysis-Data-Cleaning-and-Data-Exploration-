@@ -40,7 +40,7 @@ GROUP BY JobSatisfaction
 ORDER BY PercentageofTotal DESC;
 
 
--- This insight allows us to see how salary may not be contributing factor to Job satisfaction as Satisfied and very satisfied came 2nd and 3rd when it came to the percentage of people who rated their Job satisfaction, however of those percentages  the rank in terms of average salary was 3rd and 4th.  
+-- This insight allows us to see how salary may not be contributing factor to Job satisfaction as 'Satisfied' and 'Very Satisfied' came 2nd and 3rd when it came to the percentage of people who rated their Job satisfaction, however of those percentages  the rank in terms of average salary was 3rd and 4th.  
 
 
 #3. Work-Life Balance and Average Tenure:
@@ -52,7 +52,7 @@ FROM employee_churn_info
 GROUP BY WorkLifeBalance
 ORDER BY  AvgTenure DESC;
 
--- Looking at the data the good and excellent ratings with work life balance had a tenure of almost 8 years and the fair ratings with about 7 years. Not a big difference.
+-- Looking at the data, the good and excellent ratings with work life balance had a tenure of almost 8 years and the fair ratings with about 7 years. Not a big difference.
 
 SELECT DISTINCT WorkLifeBalance
 FROM employee_churn_info;
@@ -135,7 +135,7 @@ SELECT
 FROM BranchEnvironmentalSatisfaction
 ORDER BY AvgTenure DESC, Branch;
 
--- Here you can investigate a correlation between the different branches and the environment satisfaction rankings based on percentage of people who ticked each category. Denver is 2nd in Average Tenure however 1st in the category of Very Dissatisfied and 2nd Disatisfied. There must be other contributing factors into why they still have a longer average tenure than the other branches. This coulds be linked to better work life balance, maybe flexible working, or higher pay.
+-- Here you can investigate a correlation between the different branches and the environment satisfaction rankings based on percentage of people who ticked each category. Denver is 2nd in Average Tenure however 1st in the category of 'Very Dissatisfied' and 2nd 'Disatisfied'. There must be other contributing factors into why they still have a longer average tenure than the other branches. This could be linked to better work life balance, maybe flexible working, or higher pay.
 
 
 
