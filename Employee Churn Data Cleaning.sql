@@ -4,14 +4,14 @@ USE employee_churn_analysis;
 
 SELECT * FROM employee_churn_info;
 
-#1.Identifying the columns with the blanks, followed by the replacement of the blank values.
+#1.Identifying the columns with the blanks, followed by the replacement of the blank values
 
 -- Branch blanks and nulls replaced with Unknown
 UPDATE employee_churn_info
 SET Branch = 'Unknown'
 WHERE Branch IS NULL OR Branch = '';
 
--- Tenure blanks and nulls replaced with 0, since for some of the inisghts I will be doing, these wont matter.
+-- Tenure blanks and nulls replaced with 0, since for some of the inisghts I will be doing these wont matter
 UPDATE employee_churn_info
 SET Tenure = 0
 WHERE Tenure IS NULL OR Tenure = '';
@@ -54,6 +54,7 @@ WHERE YearsSincePromotion IS NULL OR YearsSincePromotion = '';
 SELECT * FROM employee_churn_info;
 
 -- Could see that we had some decimals that were not rounded so updated that here with the Round function
+
 UPDATE employee_churn_info
 SET WorkLifeBalance = Round(WorkLifeBalance,1)
 ;
@@ -66,7 +67,7 @@ UPDATE employee_churn_info
 SET EnvironmentSatisfaction = Round(EnvironmentSatisfaction,1)
 ;
 
--- found some null values and changed them 0
+-- found some null values and changed them 0.
 SELECT * FROM employee_churn_info
 WHERE Traininghours IS NULL;
 
